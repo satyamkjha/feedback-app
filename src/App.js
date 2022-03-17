@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import BigScreen from './BigScreen';
+import MainScreen from './MainScreen';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import FeedbackScreen from './FeedbackScreen';
+import AdminScreen from './AdminScreen';
+import CarouselScreen from './CarouselScreen';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='app'>
+			<BrowserRouter>
+				<Routes>
+					<Route exact path='/big' element={<BigScreen />} />
+					<Route exact path='/admin' element={<AdminScreen />} />
+					<Route exact path='/main' element={<MainScreen />} />
+					<Route exact path='/feedback' element={<FeedbackScreen />} />
+					<Route exact path='/carousel' element={<CarouselScreen />} />
+					<Route exact path='/' element={<MainScreen />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
