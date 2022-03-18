@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FeedbackScreen from './FeedbackScreen';
 import AdminScreen from './AdminScreen';
 import CarouselScreen from './CarouselScreen';
+import { useState } from 'react';
+import LoginScreen from './LoginScreen';
+import SelectComment from './SelectComments';
 
 function App() {
 	return (
@@ -15,6 +18,8 @@ function App() {
 					<Route exact path='/big' element={<BigScreen />} />
 					<Route exact path='/admin' element={<AdminScreen />} />
 					<Route exact path='/main' element={<MainScreen />} />
+					<Route exact path='/login' element={<LoginScreen />} />
+					<Route exact path='/select' element={<SelectComment />} />
 					<Route exact path='/feedback' element={<FeedbackScreen />} />
 					<Route exact path='/carousel' element={<CarouselScreen />} />
 					<Route exact path='/' element={<MainScreen />} />

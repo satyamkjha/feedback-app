@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
 
 const FeedbackScreen = () => {
 	const [name, setName] = useState('');
 	const [address, setAddress] = useState('');
 	const [phone, setPhone] = useState('');
 	const [feedback, setFeedback] = useState('');
+	const dispatch = useDispatch();
 
 	const navigate = useNavigate();
 
@@ -22,6 +24,15 @@ const FeedbackScreen = () => {
 				feedback: feedback,
 				show: true,
 			});
+			localStorage.setItem(
+				'current-feedback',
+				JSON.stringify({
+					name: name,
+					address: address,
+					phone: phone,
+					feedback: feedback,
+				})
+			);
 			localStorage.setItem('feedback-data', JSON.stringify(newData));
 			navigate('/main');
 		} else {
@@ -34,6 +45,15 @@ const FeedbackScreen = () => {
 				feedback: feedback,
 				show: true,
 			});
+			localStorage.setItem(
+				'current-feedback',
+				JSON.stringify({
+					name: name,
+					address: address,
+					phone: phone,
+					feedback: feedback,
+				})
+			);
 			localStorage.setItem('feedback-data', JSON.stringify(newData));
 			navigate('/main');
 		}

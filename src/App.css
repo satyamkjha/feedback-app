@@ -111,6 +111,7 @@
 }
 
 .carousel-screen {
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -219,18 +220,19 @@
 	margin-bottom: 1vh;
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 1vh;
 }
 
 .small-field {
 	width: 50%;
-	font-size: 3vh;
+	font-size: 2vh;
 	color: white;
 	font-weight: 300;
 }
 
 .large-field {
 	width: 50%;
-	font-size: 3vh;
+	font-size: 2vh;
 	color: white;
 	font-weight: 300;
 }

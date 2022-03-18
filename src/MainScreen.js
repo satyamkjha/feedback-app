@@ -9,7 +9,7 @@ const MainScreen = () => {
 				<button onClick={() => navigate('/feedback')} className='main-button'>
 					Leave a Comment
 				</button>
-				<button onClick={() => navigate('/admin')} className='main-button'>
+				<button onClick={() => navigate('/select')} className='main-button'>
 					View Select Comments
 				</button>
 			</div>
