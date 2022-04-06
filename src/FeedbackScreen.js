@@ -61,8 +61,16 @@ const FeedbackScreen = () => {
 
 	return (
 		<div className='feedback-screen'>
-			<div className='sub-heading'>Add a Testimonial</div>
-			<div className='form-group'>
+			<div style={{ marginTop: '-7vh' }} className='sub-heading'>
+				Add a Testimonial
+			</div>
+			<button
+				style={{ marginTop: '-10vh', marginBottom: '3vh' }}
+				onClick={() => navigate('/')}
+				className='submit-button'>
+				Back
+			</button>
+			<div style={{ marginTop: '-3vh' }} className='form-group'>
 				<div className='sub-text'>Name *</div>
 				<input
 					type='text'
@@ -74,7 +82,7 @@ const FeedbackScreen = () => {
 					placeholder='Enter your Name'
 				/>
 			</div>
-			<div className='form-group'>
+			<div style={{ marginTop: '-1.5vh' }} className='form-group'>
 				<div className='sub-text'>Address</div>
 				<input
 					type='text'
@@ -86,7 +94,7 @@ const FeedbackScreen = () => {
 					placeholder='Enter your Address'
 				/>
 			</div>
-			<div className='form-group'>
+			<div style={{ marginTop: '-1.5vh' }} className='form-group'>
 				<div className='sub-text'>Phone</div>
 				<input
 					type='text'
@@ -98,7 +106,7 @@ const FeedbackScreen = () => {
 					placeholder='Enter your Phone'
 				/>
 			</div>
-			<div className='form-group'>
+			<div style={{ marginTop: '-1.5vh' }} className='form-group'>
 				<div className='sub-text'>Comments/Feedback</div>
 				<textarea
 					type='text'
@@ -111,7 +119,10 @@ const FeedbackScreen = () => {
 					placeholder='Thanks for your valuable Feedback'
 				/>
 			</div>
-			<button onClick={onSubmit} className='submit-button'>
+			<button
+				style={{ marginTop: '-1.5vh' }}
+				onClick={onSubmit}
+				className='submit-button'>
 				Submit
 			</button>
 		</div>
